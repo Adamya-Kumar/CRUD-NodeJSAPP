@@ -1,0 +1,32 @@
+<%- include('header') %>
+
+
+  <div class="container" class="my-4">
+    <form action="/update/<%= user._id %>" method="post" enctype="multipart/form-data">
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1">Enter Name</span>
+        <input type="text" name="name" class="form-control" value="<%= user.name  %>" placeholder="Username"
+          aria-label="Username" aria-describedby="basic-addon1">
+      </div>
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1">Email</span>
+        <input type="text" name="email" class="form-control" placeholder=" Enter Email" aria-label="Username"
+          value="<%= user.email  %>" aria-describedby="basic-addon1">
+      </div>
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1">Phone No's</span>
+        <input type="text" name="phone" class="form-control" placeholder="Enter Phone" aria-label="Email"
+          value="<%= user.phone %>" aria-describedby="basic-addon1">
+      </div>
+      <div class="input-group">
+        <input type="file" class="form-control" id="inputGroupFile04" for="image" name="image"
+          aria-describedby="inputGroupFileAddon04" aria-label="Upload">
+        <img src="/<%= user.image %>" width="100" class="img-thumbnail mt-1">
+      </div>
+      <input type="hidden" name="old_image" value="update User" class="btn btn-success btn-lg">
+      <button class="btn btn-outline-secondary" type="submit">Update User</button>
+    </form>
+  </div>
+
+
+  <%- include("footer") %>

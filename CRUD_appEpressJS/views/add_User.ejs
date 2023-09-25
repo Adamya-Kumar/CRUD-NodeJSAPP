@@ -1,0 +1,29 @@
+<%- include('header')  %>
+
+
+<div class="container" class="my-4">
+    <form action="/add" method="post"  enctype="multipart/form-data">
+    <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1">Enter Name</span>
+        <input type="text" name="name" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+      </div>
+    <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1">Email</span>
+        <input type="text" name="email" class="form-control" placeholder=" Enter Email" aria-label="Username" aria-describedby="basic-addon1">
+      </div>
+    <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1">Phone No's</span>
+        <input type="text" name="phone" class="form-control" placeholder="Enter Phone" aria-label="Email" aria-describedby="basic-addon1">
+      </div>
+      <div class="input-group">
+        <input type="file" class="form-control" id="inputGroupFile04"
+        for="image"
+        name="image" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
+       
+      </div>
+      <button class="btn btn-outline-secondary" type="submit" >Submit</button>
+    </form>
+</div>
+
+
+<%- include("footer")  %>
